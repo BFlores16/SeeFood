@@ -13,6 +13,7 @@
 		A5AFF53A2584A92D0046BECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF5382584A92D0046BECB /* Main.storyboard */; };
 		A5AFF53C2584A92F0046BECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF53B2584A92F0046BECB /* Assets.xcassets */; };
 		A5AFF53F2584A92F0046BECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF53D2584A92F0046BECB /* LaunchScreen.storyboard */; };
+		A5AFF5482584A9D30046BECB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A5AFF53B2584A92F0046BECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5AFF53E2584A92F0046BECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AFF5402584A92F0046BECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A5AFF53B2584A92F0046BECB /* Assets.xcassets */,
 				A5AFF53D2584A92F0046BECB /* LaunchScreen.storyboard */,
 				A5AFF5402584A92F0046BECB /* Info.plist */,
+				A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */,
 			);
 			path = SeeFood;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5AFF5372584A92D0046BECB /* ViewController.swift in Sources */,
+				A5AFF5482584A9D30046BECB /* Inceptionv3.mlmodel in Sources */,
 				A5AFF5332584A92D0046BECB /* AppDelegate.swift in Sources */,
 				A5AFF5352584A92D0046BECB /* SceneDelegate.swift in Sources */,
 			);
