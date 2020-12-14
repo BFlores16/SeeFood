@@ -19,8 +19,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         
         // Choose how to use the camera button
-        //imagePicker.sourceType = .camera
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = .camera
+        //imagePicker.sourceType = .photoLibrary
         
         
         imagePicker.allowsEditing = false
@@ -55,7 +55,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            print(results)
+            if let firstResult = results.first {
+                let confidence = firstResult.confidence * 100
+                let confidenceString = String(format: "%.2f", confidence)
+                self.navigationItem.title = ("\(firstResult.identifier): %\(confidenceString)")
+                
+            }
         }
         
         let handler = VNImageRequestHandler(ciImage: image)
