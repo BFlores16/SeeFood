@@ -14,6 +14,9 @@
 		A5AFF53C2584A92F0046BECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF53B2584A92F0046BECB /* Assets.xcassets */; };
 		A5AFF53F2584A92F0046BECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF53D2584A92F0046BECB /* LaunchScreen.storyboard */; };
 		A5AFF5482584A9D30046BECB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */; };
+		A5AFF54C258856090046BECB /* SeeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF54B258856090046BECB /* SeeBackground.png */; };
+		A5AFF550258857340046BECB /* cameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF54E258857340046BECB /* cameraIcon.png */; };
+		A5AFF551258857340046BECB /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AFF54F258857340046BECB /* questionMark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A5AFF53E2584A92F0046BECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AFF5402584A92F0046BECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		A5AFF54B258856090046BECB /* SeeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeeBackground.png; sourceTree = "<group>"; };
+		A5AFF54E258857340046BECB /* cameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIcon.png; sourceTree = "<group>"; };
+		A5AFF54F258857340046BECB /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				A5AFF53D2584A92F0046BECB /* LaunchScreen.storyboard */,
 				A5AFF5402584A92F0046BECB /* Info.plist */,
 				A5AFF5472584A9D30046BECB /* Inceptionv3.mlmodel */,
+				A5AFF54B258856090046BECB /* SeeBackground.png */,
+				A5AFF54E258857340046BECB /* cameraIcon.png */,
+				A5AFF54F258857340046BECB /* questionMark.png */,
 			);
 			path = SeeFood;
 			sourceTree = "<group>";
@@ -127,7 +136,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AFF551258857340046BECB /* questionMark.png in Resources */,
+				A5AFF550258857340046BECB /* cameraIcon.png in Resources */,
 				A5AFF53F2584A92F0046BECB /* LaunchScreen.storyboard in Resources */,
+				A5AFF54C258856090046BECB /* SeeBackground.png in Resources */,
 				A5AFF53C2584A92F0046BECB /* Assets.xcassets in Resources */,
 				A5AFF53A2584A92D0046BECB /* Main.storyboard in Resources */,
 			);

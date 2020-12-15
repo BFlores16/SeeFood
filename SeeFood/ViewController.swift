@@ -12,10 +12,16 @@ import Vision
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    @IBOutlet weak var itemDescriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageView.layer.borderWidth = 1.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
+        imageView.clipsToBounds = true
+       
         imagePicker.delegate = self
         
         // Choose how to use the camera button
@@ -30,6 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = userPickedImage
+            imageView.contentMode = .scaleAspectFill
             
             // Convert to Core Image Image (CII)
             // Allows us to user COREML to get an interpretation from it
@@ -55,10 +62,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
+            
             if let firstResult = results.first {
                 let confidence = firstResult.confidence * 100
                 let confidenceString = String(format: "%.2f", confidence)
-                self.navigationItem.title = ("\(firstResult.identifier): %\(confidenceString)")
+                self.itemDescriptionLabel.isHidden = false
+                self.itemDescriptionLabel.text = ("\(firstResult.identifier): %\(confidenceString)")
                 
             }
         }
@@ -74,7 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
-    @IBAction func cameraButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func cameraButtonPressed(_ sender: UIButton) {
         print("first")
         present(imagePicker, animated: true, completion: nil)
         
